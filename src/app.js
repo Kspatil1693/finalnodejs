@@ -23,7 +23,7 @@ app.set("views",templates_path);
 hbs.registerPartials(partials_Path);
 
 
-
+console.log(process.env.SECRET_KEY);
 
 app.get("/",(req,res)=>{
     res.render("index");
@@ -105,7 +105,7 @@ app.get("/register",(req,res)=>{
             res.status(400).send(e);
         }
       })
-      console.log(process.env.SECRET_KEY);
+     
 
   /* // How to use the bcrypt js
    const bcrypt= require("bcrypt");
